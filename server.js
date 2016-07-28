@@ -137,15 +137,15 @@ app.post('/playdecision/:id', function(req, res) {
         antebet = req.body.antebet;
         pairPlusBet = req.body.pairplusbet;
 
-<<<<<<< HEAD
+
         bestPlayerHand = pokerFunctions.getBestHand(playerCardRanks, playerSuites);
 
         bestDealerHand = pokerFunctions.getBestHand(dealerCardRanks, dealerSuites);
-=======
+
         bestPlayerHand = getBestHand(playerCardRanks, playerSuites);
 
         bestDealerHand = getBestHand(dealerCardRanks, dealerSuites);
->>>>>>> parent of 9d28dbe... fixed flush functions
+
 
         resultFromHand = pokerFunctions.getWinner(bestDealerHand, bestPlayerHand, antebet, pairPlusBet); //Money to add or deduct from current balance
 
@@ -272,8 +272,6 @@ app.post('/playdecision/:id', function(req, res) {
 //  }); //END OF SQL QUERY
 // }); //END OF POST /ANTEBETS
 
-<<<<<<< HEAD
-=======
 
 BestHandInfo = function(nameOfHand, rankOfHand, highCard) {
     this.nameOfHand = nameOfHand,
@@ -529,7 +527,7 @@ function payOuts(playerHandOutcome, playerHand, antebet, pairPlus) {
 
 //---------------------------------LOGIC END-------------------------------------------------------
 module.exports = checkThreeKind;
->>>>>>> parent of 9d28dbe... fixed flush functions
+
 
 var port = process.env.PORT || 3000;
 app.listen(port);
